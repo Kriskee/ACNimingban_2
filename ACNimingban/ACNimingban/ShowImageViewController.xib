@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowImageViewController">
+            <connections>
+                <outlet property="gifH" destination="Mm8-ED-ZGt" id="sET-SK-PJm"/>
+                <outlet property="gifView" destination="4hI-zy-Zqp" id="jb9-iF-Hkl"/>
+                <outlet property="gifW" destination="L4f-7G-aqT" id="bWP-D4-jo2"/>
+                <outlet property="imgH" destination="wrC-SZ-Tef" id="LqR-Em-jea"/>
+                <outlet property="imgView" destination="5EI-9z-SZB" id="B0t-LE-hB1"/>
+                <outlet property="imgW" destination="TaT-l5-AR1" id="Glo-Q5-Pom"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hI-zy-Zqp">
+                    <rect key="frame" x="27" y="188" width="360" height="360"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="360" id="L4f-7G-aqT"/>
+                        <constraint firstAttribute="height" constant="360" id="Mm8-ED-ZGt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="opaque" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </webView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-9z-SZB">
+                    <rect key="frame" x="27" y="188" width="360" height="360"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="360" id="TaT-l5-AR1"/>
+                        <constraint firstAttribute="height" constant="360" id="wrC-SZ-Tef"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-Ih-7KK" userLabel="BackCircleView">
+                    <rect key="frame" x="185" y="664" width="44" height="44"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Rix-Ih-7KK" secondAttribute="height" id="3mF-sl-HMQ"/>
+                        <constraint firstAttribute="width" constant="44" id="IGA-9o-Ei2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrd-c0-8wz">
+                    <rect key="frame" x="196" y="675" width="22" height="22"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.82221554487179493" green="0.14713592555341215" blue="0.094042887638633207" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="FPt-3P-9q6"/>
+                        <constraint firstAttribute="height" constant="22" id="V4I-YS-5Um"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="zoom.png"/>
+                    <connections>
+                        <action selector="zoomImage:" destination="-1" eventType="touchUpInside" id="fLL-U4-xfS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="4hI-zy-Zqp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="26W-Hu-dPR"/>
+                <constraint firstItem="4hI-zy-Zqp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7SJ-Mh-LNH"/>
+                <constraint firstItem="5EI-9z-SZB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8zn-G5-KG1"/>
+                <constraint firstItem="hrd-c0-8wz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T1I-oS-grs"/>
+                <constraint firstItem="hrd-c0-8wz" firstAttribute="centerY" secondItem="Rix-Ih-7KK" secondAttribute="centerY" id="YmP-36-Hy6"/>
+                <constraint firstAttribute="bottom" secondItem="hrd-c0-8wz" secondAttribute="bottom" constant="39" id="ba8-Xy-5Rm"/>
+                <constraint firstItem="hrd-c0-8wz" firstAttribute="centerX" secondItem="Rix-Ih-7KK" secondAttribute="centerX" id="eXo-NP-BhJ"/>
+                <constraint firstItem="5EI-9z-SZB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gzO-uj-BT5"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="375" y="423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zoom.png" width="22" height="22"/>
+    </resources>
+</document>
